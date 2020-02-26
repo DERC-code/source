@@ -7,20 +7,20 @@ MPU9265 = 0x68
 AK8963 = 0x0c
 bus = smbus.SMBus(1)
  
-def main():
-    MPU9265_init()
+# def main():
+#     MPU9265_init()
  
-    while True:
-        gyro = get_gyro()
-        accel = get_accel()
-        magnet = get_magnet()
-        temp = get_temp()
+#     while True:
+#         gyro = get_gyro()
+#         accel = get_accel()
+#         magnet = get_magnet()
+#         temp = get_temp()
  
-        print("gyro[%+4.2f, %+4.2f, %+4.2f]" % (gyro[0], gyro[1], gyro[2]), end="\t")
-        print("accel[%+4.2f, %+4.2f, %+4.2f]" % (accel[0], accel[1], accel[2]), end="\t")
-        print("magnet[%+4.2f, %+4.2f, %+4.2f]" % (magnet[0], magnet[1], magnet[2]), end="\t")
-        print("temp[%+4.2f]" % (temp))
-        sleep(0.1)
+#         print("gyro[%+4.2f, %+4.2f, %+4.2f]" % (gyro[0], gyro[1], gyro[2]), end="\t")
+#         print("accel[%+4.2f, %+4.2f, %+4.2f]" % (accel[0], accel[1], accel[2]), end="\t")
+#         print("magnet[%+4.2f, %+4.2f, %+4.2f]" % (magnet[0], magnet[1], magnet[2]), end="\t")
+#         print("temp[%+4.2f]" % (temp))
+#         sleep(0.1)
 
 def MPU9265_init():
     # スリープモードの解除
@@ -92,5 +92,3 @@ def u2s(x):
     else:
         return x
 
-if __name__ == '__main__':
-    main()

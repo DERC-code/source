@@ -1,7 +1,7 @@
 import Motor
 import time
 
-class Controller():
+class Controller:
     def controle(motor):
         while (True):
             val = input('スピードを入力（例 ”40, -30"）: ')
